@@ -253,7 +253,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="develop-coll --active">
+					<div class="develop-coll">
 						<div class="part-box">
 							<div class="part-box-coll">
 								<div class="part-subtitle">
@@ -465,7 +465,218 @@
 							</div>
 						</div>
 					</div>
-		
+					<div class="develop-coll --active">
+						<div class="part-box">
+							<div class="part-box-coll">
+								<div class="part-subtitle">
+									Часть 2
+								</div>
+								<div class="part-title">
+									Разработка алгоритма 3/5
+								</div>
+							</div>
+							<button class="button --deactive ">
+								Скомпилировать
+							</button>
+						</div>
+						<div class="develop-box-code">
+							<ol class="develop-code">
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										// Режим работы: движение вдоль стен
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+					
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										// Объявим в классе Engine значение,
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										// которое будет определять, в какой точке мы находимся сейчас,
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										// а также допустимые максимальные и минимальные значения
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										<span class="develop-answer -deactive -active">?????</span> <span class="--red">Engine</span> {
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;<span class="--red">constructor</span>() {
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;&ensp;&ensp;this.max = <span class="--num">5</span>
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;&ensp;&ensp;this.min = <span class="--num">0</span>
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+					
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;&ensp;&ensp;this.currentPosition = {
+									</div>
+								</li>
+					
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="--num">x: 5,</span>
+									</div>
+								</li>
+					
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="develop-answer -deactive">????</span>
+									</div>
+								</li>
+					
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;&ensp;&ensp;};
+									</div>
+								</li>
+					
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;}
+									</div>
+								</li>
+					
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+					
+									</div>
+								</li>
+					
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp; <span class="--red">command</span>(command, ...args) {
+									</div>
+								</li>
+					
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;&ensp; console.<span class="--red">log</span>(command, args)
+									</div>
+								</li>
+					
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;}
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										}
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+					
+									</div>
+								</li>
+					
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										// Вызываем функцию движения по разным направлениям, чтобы пройти
+									</div>
+								</li>
+					
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										вдоль всего периметра
+									</div>
+								</li>
+					
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										<span class="--red">move</span>(<span class="--green">'forward'</span>, <span
+											class="--num">1</span>)
+									</div>
+								</li>
+					
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										<span class="--red">move</span>(<span class="--green">'left'</span>, <span class="--num">5</span>)
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										<span class="develop-answer -deactive">????</span>(<span class="--green">'backward'</span>,<span
+											class="--num">5</span>)
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										<span class="--red">move</span>(<span class="develop-answer -deactive">??????????</span>)
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+					
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										// После того, как заполните все пробелы, запустите код, нажав кнопку
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										«Скомпилировать»
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+					
+									</div>
+								</li>
+					
+					
+					
+					
+							</ol>
+						</div>
+					
+						<div class="develop-choice-box">
+							<div class="develop-choice-coll">
+								Выберите подходящий вариант
+							</div>
+							<div class="develop-box-btn">
+								<button class="develop-btn" data-size="" data-compare="">
+									‘right’, 5
+								</button>
+								<button class="develop-btn" data-size="" data-compare="">
+									class
+								</button>
+								<button class="develop-btn" data-size="" data-compare="">
+									move
+								</button>
+								<button class="develop-btn" data-size="" data-compare="">
+									y: 4
+								</button>
+							</div>
+						</div>
+					</div>
 					<div class="develop-box">
 						<img src="./img/develop/develop-room.svg" alt="" class="develop-img">
 						<img src="./img/develop/develop-robot.svg" alt="" class="develop-robot">
@@ -498,7 +709,7 @@
 	
 	
 	
-	<div class="popup-wrapp ">
+	<div class="popup-wrapp">
 		<div class="popup">
 			<div class="popup-coll">
 				<div class="popup-coll-title">
@@ -511,13 +722,35 @@
 					нужный в роботе-пылесосе. Рассмотрим часть кода, где пылесос двигается по заданному заранее маршруту.
 				</div>
 	
-				<button class="popup-btn">
-					Приступить
-				</button>
+	
 			</div>
-			<div class="popup-box-img">
-				<img src="./img/develop/develop-modal.svg" alt="" class="popup-img">
+			<button class="popup-btn">
+				Приступить
+			</button>
+		</div>
+	</div>
+	
+	<div class="popup-wrapp  ">
+		<div class="popup popup-2">
+			<div class="popup-coll">
+				<div class="popup-coll-title">
+					Супер! Далее —<Br>
+					движение по спирали
+				</div>
+	
+				<div class="popup-coll-text">
+					Данный алгоритм хорош для больших комнат с минимальным количеством мебели. Или когда нужно убрать мусор
+					в одной точке — например, если рассыпали соль возле стола.
+				</div>
+				<div class="popup-coll-text">
+					Для этого робот должен проверить, есть ли перед ним препятствие. Нет? Отлично, двигаемся по кругу и
+					постепенно увеличиваем радиус. Есть препятствие? Прерываем цикл и переходим в другой режим. Попробуем!
+				</div>
+	
 			</div>
+			<button class="popup-btn">
+				Вперёд
+			</button>
 		</div>
 	</div>
 	
