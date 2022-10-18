@@ -465,7 +465,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="develop-coll --active">
+					<div class="develop-coll">
 						<div class="part-box">
 							<div class="part-box-coll">
 								<div class="part-subtitle">
@@ -737,6 +737,531 @@
 							</div>
 						</div>
 					</div>
+					<div class="develop-coll">
+						<div class="part-box">
+							<div class="part-box-coll">
+								<div class="part-subtitle">
+									Часть 2
+								</div>
+								<div class="part-title">
+									Разработка алгоритма 4/5
+								</div>
+							</div>
+							<button class="button --deactive ">
+								Скомпилировать
+							</button>
+						</div>
+						<div class="develop-box-code">
+							<ol class="develop-code">
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										// Режим работы: движение змейкой
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+					
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										<span class="--func">function</span> <span class="--red">snake</span>() {
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;// Указываем первичное направление 'влево', в котором должен начать
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										движение пылесос
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;<span class="--func">let</span> direction
+										= <span class="develop-answer -deactive -active">??????</span>
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+					
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										// Создаем цикл, который проверяет, что пылесос не оказался в
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										финальной левой точке
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;<span class="develop-answer -deactive">?????</span> (engine.currentPosition.x !==
+										engine.min
+										&&
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										engine.currentPosition.y !== <span class="develop-answer -deactive">??????????</span>) {
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;&ensp;&ensp;// Проверяем, допустимо ли движение в нужном направлении и
+									</div>
+								</li>
+					
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;&ensp;&ensp;// на какое направление нужно изменить следование, если впереди
+									</div>
+								</li>
+					
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										нас препятствие
+									</div>
+								</li>
+					
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;&ensp;&ensp;<span class="--func">const</span> result = <span
+											class="--red">wallCanBlockSnakeMovement</span>
+										(direction, engine.min,
+									</div>
+								</li>
+					
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										engine.max)
+									</div>
+								</li>
+					
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+					
+									</div>
+								</li>
+					
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;&ensp;&ensp;// Проверяем, что мы не можем двигаться в заданом направлении
+									</div>
+								</li>
+					
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										через условие 'если'
+									</div>
+								</li>
+					
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;&ensp;&ensp;<span class="develop-answer -deactive">??</span> (!result.can) {
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;direction = result.direction
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;&ensp;&ensp;}
+									</div>
+								</li>
+					
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+					
+									</div>
+								</li>
+					
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;&ensp;&ensp;// Производим движение
+									</div>
+								</li>
+					
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;&ensp;&ensp;<span class="--func">move</span>(direction, <span class="--num">1</span>)
+									</div>
+								</li>
+					
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;}
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										}
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+					
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										// После того, как заполните все пробелы, запустите код, нажав кнопку
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										«Скомпилировать»
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+					
+									</div>
+								</li>
+					
+							</ol>
+						</div>
+					
+						<div class="develop-choice-box">
+							<div class="develop-choice-coll">
+								Выберите подходящий вариант
+							</div>
+							<div class="develop-box-btn">
+								<button class="develop-btn" data-size="" data-compare="">
+									engine.min
+								</button>
+								<button class="develop-btn" data-size="" data-compare="">
+									left
+								</button>
+								<button class="develop-btn" data-size="" data-compare="">
+									if
+								</button>
+								<button class="develop-btn" data-size="" data-compare="">
+									while
+								</button>
+					
+							</div>
+						</div>
+					</div>
+					<div class="develop-coll --active">
+						<div class="part-box">
+							<div class="part-box-coll">
+								<div class="part-subtitle">
+									Часть 2
+								</div>
+								<div class="part-title">
+									Разработка алгоритма 5/5
+								</div>
+							</div>
+							<button class="button --deactive ">
+								Скомпилировать
+							</button>
+						</div>
+						<div class="develop-box-code">
+							<ol class="develop-code">
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										// Режим работы: движение змейкой с препятствиями
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+					
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										<span class="--func">function</span> <span class="--red">snake_with_block</span>() {
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;// Указываем первичное направление 'влево', в котором должен начать
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										движение пылесос
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;<span class="--func">let</span> direction
+										= <span class="--green">'left'</span>
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+					
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										// Создаем цикл, который проверяет, что пылесос не оказался в
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										финальной левой точке
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;<span class="--func">while</span> (engine.currentPosition.x !==
+										engine.min
+										&&
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										engine.currentPosition.y !== engine.min) {
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;&ensp;&ensp;// Проверяем, допустимо ли движение в нужном направлении и
+									</div>
+								</li>
+					
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;&ensp;&ensp;// на какое направление нужно изменить следование, если впереди
+									</div>
+								</li>
+					
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										нас препятствие
+									</div>
+								</li>
+					
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;&ensp;&ensp;<span class="--func">const</span> result = <span
+											class="develop-answer -deactive -active">?????????????????????????</span>
+										(direction, engine.min,
+									</div>
+								</li>
+					
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										engine.max, engine.block)
+									</div>
+								</li>
+					
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+					
+									</div>
+								</li>
+					
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;&ensp;&ensp;// Проверяем, что мы не можем двигаться по заданому направлению с
+									</div>
+								</li>
+					
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										помощью инструкции 'if...else'
+									</div>
+								</li>
+					
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;&ensp;&ensp;<span class="--func">if</span> (!result.can) {
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="develop-answer -deactive">??</span>
+										(result.isEndOfMap) {
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;// Меняем направление
+									</div>
+								</li>
+					
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;direction = result.direction
+									</div>
+								</li>
+					
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;} <span class="develop-answer -deactive">????</span> {
+									</div>
+								</li>
+					
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;// Производим объезд препятствия
+									</div>
+								</li>
+					
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="--red">avoidWall</span>()
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;}
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;&ensp;&ensp;}
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+					
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;&ensp;&ensp;// Производим движение, если препятствия нет
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;&ensp;&ensp;<span class="--red">move</span>(direction, <span class="--num">1</span>)
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;}
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										}
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+					
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										// Функция для объезда препятствий
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										<span class="develop-answer -deactive">????????</span> <span class="--red">avoidWall</span>(x, y) {
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;// Получаем массив координат, по которым пылесос должен совершить
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										движение
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;<span class="--func">let</span> way = engine.<span
+											class="--red">predictWayToAvoidWall</span>(x, y)
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+					
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;// Циклично перемещаемся между точками, например
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;way.<span class="--red">forEach</span>(({ x, y }) => {
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;&ensp;&ensp;engine.<span class="--red">moveToCoords</span>([{<span class="--num">x: 0,
+											y:
+											0</span>}, {<span class="--num">x:1, y: 0</span>}])
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;})
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										}
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+					
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										// После того, как заполните все пробелы, запустите код, нажав кнопку
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										«Скомпилировать»
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+					
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+					
+									</div>
+								</li>
+					
+							</ol>
+						</div>
+					
+						<div class="develop-choice-box">
+							<div class="develop-choice-coll">
+								Выберите подходящий вариант
+							</div>
+							<div class="develop-box-btn">
+								<button class="develop-btn" data-size="" data-compare="">
+									else
+								</button>
+								<button class="develop-btn" data-size="" data-compare="">
+									function
+								</button>
+								<button class="develop-btn" data-size="" data-compare="">
+									wallCanBlockSnakeMovement
+								</button>
+								<button class="develop-btn" data-size="" data-compare="">
+									if
+								</button>
+					
+							</div>
+						</div>
+					</div>
 					<div class="develop-box">
 						<img src="./img/develop/develop-room.svg" alt="" class="develop-img">
 						<img src="./img/develop/develop-robot.svg" alt="" class="develop-robot">
@@ -766,7 +1291,22 @@
 		</div>
 	</div>
 	
-	
+	<div class="modal-wrapp ">
+		<div class="modal">
+			<div class="modal-coll">
+				<h3 class="modal-col-title">
+					Программа работает!
+				</h3>
+				<p class="modal-col-text">
+					Функции, параметры, классы и условия — всё в вашем коде <br> компилируется без ошибок. Отличный старт
+					для будущего<br> разработчика!
+				</p>
+			</div>
+			<button class="modal-btn modal-btn-2" data-etap="">
+				Далее
+			</button>
+		</div>
+	</div>
 	
 	
 	<div class="popup-wrapp">
@@ -810,6 +1350,48 @@
 			</div>
 			<button class="popup-btn">
 				Вперёд
+			</button>
+		</div>
+	</div>
+	
+	<div class="popup-wrapp  ">
+		<div class="popup popup-3">
+			<div class="popup-coll">
+				<div class="popup-coll-title">
+					Идеально! Теперь движение <br>
+					змейкой
+				</div>
+	
+				<div class="popup-coll-text">
+					Если двигаться только вдоль стен, мы не сможем убрать середину комнаты. Давайте посмотрим на отрезок
+					кода с функцией движения пылесоса «змейкой».
+				</div>
+	
+	
+			</div>
+			<button class="popup-btn">
+				Ш-ш-ш-ш-ш-ш
+			</button>
+		</div>
+	</div>
+	
+	<div class="popup-wrapp">
+		<div class="popup popup-4">
+			<div class="popup-coll">
+				<div class="popup-coll-title">
+					Великолепно! А теперь змейка <br>
+					с препятствиями
+				</div>
+	
+				<div class="popup-coll-text">
+					Функцию для обычной «змейки» мы уже составили. Но вот незадача: на пути иногда встречаются препятствия.
+					Чтобы объехать цветок, кроссовки или брошенный на пол рюкзак, нужно дописать условие для объезда.
+				</div>
+	
+	
+			</div>
+			<button class="popup-btn">
+				Go!
 			</button>
 		</div>
 	</div>
