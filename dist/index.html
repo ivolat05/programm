@@ -483,7 +483,7 @@
 							<ol class="develop-code">
 								<li class="develop-code-list">
 									<div class="develop-code-text">
-										// Режим работы: движение вдоль стен
+										// Режим работы: движение по спирали
 									</div>
 								</li>
 								<li class="develop-code-list">
@@ -493,37 +493,24 @@
 								</li>
 								<li class="develop-code-list">
 									<div class="develop-code-text">
-										// Объявим в классе Engine значение,
+										<span class="--func">function</span> <span class="--red">spiral</span>() {
 									</div>
 								</li>
 								<li class="develop-code-list">
 									<div class="develop-code-text">
-										// которое будет определять, в какой точке мы находимся сейчас,
+										&ensp;&ensp;// Указываем первичное направление, в котором должен начать движение
 									</div>
 								</li>
 								<li class="develop-code-list">
 									<div class="develop-code-text">
-										// а также допустимые максимальные и минимальные значения
+										пылесос
 									</div>
 								</li>
 								<li class="develop-code-list">
 									<div class="develop-code-text">
-										<span class="develop-answer -deactive -active">?????</span> <span class="--red">Engine</span> {
-									</div>
-								</li>
-								<li class="develop-code-list">
-									<div class="develop-code-text">
-										&ensp;&ensp;<span class="--red">constructor</span>() {
-									</div>
-								</li>
-								<li class="develop-code-list">
-									<div class="develop-code-text">
-										&ensp;&ensp;&ensp;&ensp;this.max = <span class="--num">5</span>
-									</div>
-								</li>
-								<li class="develop-code-list">
-									<div class="develop-code-text">
-										&ensp;&ensp;&ensp;&ensp;this.min = <span class="--num">0</span>
+										&ensp;&ensp;<span class="--func">let</span> <span
+											class="develop-answer -deactive -active">?????????</span>
+										= <span class="--green">'forward'</span>
 									</div>
 								</li>
 								<li class="develop-code-list">
@@ -533,52 +520,162 @@
 								</li>
 								<li class="develop-code-list">
 									<div class="develop-code-text">
-										&ensp;&ensp;&ensp;&ensp;this.currentPosition = {
+										&ensp;&ensp;// Начальный радиус для спирального алгоритма
 									</div>
 								</li>
-					
 								<li class="develop-code-list">
 									<div class="develop-code-text">
-										&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="--num">x: 5,</span>
+										&ensp;&ensp;let radius = <span class="--num">1</span>
 									</div>
 								</li>
-					
-								<li class="develop-code-list">
-									<div class="develop-code-text">
-										&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="develop-answer -deactive">????</span>
-									</div>
-								</li>
-					
-								<li class="develop-code-list">
-									<div class="develop-code-text">
-										&ensp;&ensp;&ensp;&ensp;};
-									</div>
-								</li>
-					
-								<li class="develop-code-list">
-									<div class="develop-code-text">
-										&ensp;&ensp;}
-									</div>
-								</li>
-					
 								<li class="develop-code-list">
 									<div class="develop-code-text">
 					
 									</div>
 								</li>
-					
 								<li class="develop-code-list">
 									<div class="develop-code-text">
-										&ensp;&ensp; <span class="--red">command</span>(command, ...args) {
+										&ensp;&ensp;// Создаем цикл, который проверяет, что пылесос не оказался в
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										финальной левой точке
 									</div>
 								</li>
 					
 								<li class="develop-code-list">
 									<div class="develop-code-text">
-										&ensp;&ensp;&ensp; console.<span class="--red">log</span>(command, args)
+										&ensp;&ensp;<span class="--func">while</span> (<span class="develop-answer -deactive">????</span>
+										) {
 									</div>
 								</li>
 					
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;&ensp;&ensp;// Проверяем, допустимо ли движение в нужном направлении и
+									</div>
+								</li>
+					
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;&ensp;&ensp;// на какое направление нужно изменить следование, если впереди
+									</div>
+								</li>
+					
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										нас препятствие
+									</div>
+								</li>
+					
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;&ensp;&ensp;<span class="--func">const</span> result =
+										<span class="--red">wallCanBlockMovementInRadius</span>(direction, engine.min,
+									</div>
+								</li>
+					
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										engine.max, <span class="develop-answer -deactive">??????</span>
+										)
+									</div>
+								</li>
+					
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+					
+									</div>
+								</li>
+					
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;&ensp;&ensp;// Проверяем, что мы можем двигаться по заданому направлению
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;&ensp;&ensp;<span class="--func">if</span> (result.can) {
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="--func">for</span> (<span class="--func">let</span>
+										i = <span class="--num">0</span>; i < radius; i++) { </div>
+								</li>
+					
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;// Получаем новое направление движения
+									</div>
+								</li>
+					
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="--func">let</span> nextDirection =
+										<span class="--red">spiralMove</span>(direction, i)
+									</div>
+								</li>
+					
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+					
+									</div>
+								</li>
+					
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;// Меняет направление движения
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;direction = nextDirection
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;}
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;&ensp;&ensp;// Увеличиваем радиус
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="develop-answer -deactive">????????</span>
+					
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;&ensp;&ensp;} <span class="--func">else</span> {
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;// Завершаем выполнение цикла, если больше не имеем возможности
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										двигаться по спирали
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="develop-answer -deactive">?????</span>
+					
+									</div>
+								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
+										&ensp;&ensp;&ensp;&ensp;}
+									</div>
+								</li>
 								<li class="develop-code-list">
 									<div class="develop-code-text">
 										&ensp;&ensp;}
@@ -587,47 +684,6 @@
 								<li class="develop-code-list">
 									<div class="develop-code-text">
 										}
-									</div>
-								</li>
-								<li class="develop-code-list">
-									<div class="develop-code-text">
-					
-									</div>
-								</li>
-					
-								<li class="develop-code-list">
-									<div class="develop-code-text">
-										// Вызываем функцию движения по разным направлениям, чтобы пройти
-									</div>
-								</li>
-					
-								<li class="develop-code-list">
-									<div class="develop-code-text">
-										вдоль всего периметра
-									</div>
-								</li>
-					
-								<li class="develop-code-list">
-									<div class="develop-code-text">
-										<span class="--red">move</span>(<span class="--green">'forward'</span>, <span
-											class="--num">1</span>)
-									</div>
-								</li>
-					
-								<li class="develop-code-list">
-									<div class="develop-code-text">
-										<span class="--red">move</span>(<span class="--green">'left'</span>, <span class="--num">5</span>)
-									</div>
-								</li>
-								<li class="develop-code-list">
-									<div class="develop-code-text">
-										<span class="develop-answer -deactive">????</span>(<span class="--green">'backward'</span>,<span
-											class="--num">5</span>)
-									</div>
-								</li>
-								<li class="develop-code-list">
-									<div class="develop-code-text">
-										<span class="--red">move</span>(<span class="develop-answer -deactive">??????????</span>)
 									</div>
 								</li>
 								<li class="develop-code-list">
@@ -650,10 +706,11 @@
 					
 									</div>
 								</li>
+								<li class="develop-code-list">
+									<div class="develop-code-text">
 					
-					
-					
-					
+									</div>
+								</li>
 							</ol>
 						</div>
 					
@@ -663,16 +720,19 @@
 							</div>
 							<div class="develop-box-btn">
 								<button class="develop-btn" data-size="" data-compare="">
-									‘right’, 5
+									radius++
 								</button>
 								<button class="develop-btn" data-size="" data-compare="">
-									class
+									direction
 								</button>
 								<button class="develop-btn" data-size="" data-compare="">
-									move
+									break
 								</button>
 								<button class="develop-btn" data-size="" data-compare="">
-									y: 4
+									radius
+								</button>
+								<button class="develop-btn" data-size="" data-compare="">
+									true
 								</button>
 							</div>
 						</div>
