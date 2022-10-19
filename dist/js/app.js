@@ -43,7 +43,14 @@ $(function () {
 			"title": "Пока нужно закончить работу с платой.",
 			"text": 'Но скоро вы доберётесь до заветной чашки.',
 		},
-
+		"erorr": {
+			"title": "Ой, это неверный вариант!",
+			"text": 'Попробуйте накодить что-нибудь другое или загляните в справочник.',
+		},
+		"func-erorr": {
+			"title": "Ой, это неверный вариант!",
+			"text": 'Выберите что-нибудь другое или загляните в справочник.',
+		},
 	}
 
 	// start
@@ -95,6 +102,62 @@ $(function () {
 		deletError()
 
 	}
+
+	// develop
+	function develop() {
+		let btn = document.querySelectorAll('.develop-btn');
+		let counter = 0;
+		btn.forEach(item => {
+			item.addEventListener('click', () => {
+				let dataSize = item.getAttribute('data-size');
+				let dataCompare = item.getAttribute('data-compare')
+				if (counter == dataSize) {
+					let dataContent = item.getAttribute('data-content');
+					let dataClass = item.getAttribute('data-class');
+					let id = document.getElementById(`ansver-${dataSize}`);
+					let idTwo = document.getElementById(`ansver-${+dataSize + 1}`);
+
+					if (idTwo) {
+						idTwo.classList.add('-active')
+						idTwo.scrollIntoView({
+							block: 'center',
+							behavior: 'smooth',
+						});
+					}
+					id.innerHTML = dataContent;
+					id.className = dataClass
+					item.classList.add('--active');
+					deletStatError()
+					counter++
+					if (dataSize == 1) {
+						let btnId = document.getElementById('complite-1');
+						btnId.classList.remove('--deactive');
+					}
+					if (dataSize == 5) {
+						let btnId = document.getElementById('complite-2');
+						btnId.classList.remove('--deactive');
+					}
+					if (dataSize == 10) {
+						let btnId = document.getElementById('complite-3');
+						btnId.classList.remove('--deactive');
+					}
+					if (dataSize == 14) {
+						let btnId = document.getElementById('complite-4');
+						btnId.classList.remove('--deactive');
+					}
+					if (dataSize == 18) {
+						let btnId = document.getElementById('complite-5');
+						btnId.classList.remove('--deactive');
+					}
+				} else {
+					buttonError(listError[dataCompare].title, listError[dataCompare].text)
+
+				}
+			})
+		})
+
+	}
+	develop()
 
 	// удаление сообщения об ошибке при нажатии верного варианта
 	function deletStatError() {
@@ -171,4 +234,127 @@ $(function () {
 		})
 	}
 	openEtap()
+
+	// отрытие этапов програмированя
+	function openBox() {
+		let btn = document.querySelectorAll('.open-box');
+		let window = document.querySelectorAll('.modal-wind');
+		let box = document.querySelectorAll('.box');
+		btn.forEach(item => {
+			item.addEventListener('click', () => {
+				let dataModal = item.getAttribute('data-box');
+				let id = document.getElementById(dataModal);
+				console.log(id)
+				console.log(dataModal)
+				window.forEach(e => {
+					e.classList.remove('--active');
+				})
+				box.forEach(x => {
+					x.classList.remove('--active');
+				})
+				id.classList.add('--active')
+			})
+		})
+	}
+	openBox()
+
+	function developBtnComplite() {
+		let btn = document.querySelectorAll('.develop-btn-complite');
+		let window = document.querySelectorAll('.modal-wind');
+		let developRobot = document.querySelector('.develop-robot');
+		btn.forEach(item => {
+			item.addEventListener('click', () => {
+				let dataModal = item.getAttribute('data-modal');
+				let id = document.getElementById(dataModal);
+				item.classList.add('point-no-event');
+				deletStatError()
+				window.forEach(e => {
+					if (e.classList.contains('--active')) {
+						e.classList.remove('--active');
+					}
+
+				})
+
+				if (dataModal == 'develop-1') {
+					developRobot.classList.add('--start-one')
+					developRobot.classList.add('--etap-two')
+					setTimeout(() => {
+						developRobot.classList.remove('--start-one');
+						id.classList.add('--active')
+					}, 4000)
+				}
+				if (dataModal == 'develop-2') {
+					developRobot.classList.add('--start-two')
+					developRobot.classList.remove('--etap-two')
+					setTimeout(() => {
+						developRobot.classList.remove('--start-one');
+						id.classList.add('--active')
+					}, 9000)
+				}
+				if (dataModal == 'develop-3') {
+					developRobot.classList.add('--start-three')
+					setTimeout(() => {
+						developRobot.classList.remove('--start-one');
+						id.classList.add('--active')
+					}, 16000)
+				}
+				if (dataModal == 'develop-4') {
+					developRobot.classList.add('--start-four');
+					setTimeout(() => {
+						developRobot.classList.remove('--start-one');
+						id.classList.add('--active')
+						let developImgTwo = document.querySelector('.develop-img-2');
+						developImgTwo.classList.add('--active');
+					}, 11000)
+				}
+				if (dataModal == 'develop-5') {
+					developRobot.classList.add('--start-five')
+					setTimeout(() => {
+						developRobot.classList.remove('--start-one');
+						id.classList.add('--active')
+					}, 14000)
+				}
+
+
+			})
+		})
+	}
+	developBtnComplite()
+
+	// finish
+	function finish() {
+		let btn = document.querySelectorAll('.funct-btn');
+		let box = document.querySelectorAll('.funct-box-btn');
+		btn.forEach(item => {
+			item.addEventListener('click', () => {
+				let dataSize = item.getAttribute('data-size');
+				let dataCompare = item.getAttribute('data-compare');
+				let funcBox = document.querySelectorAll('.func-box');
+				if (dataCompare == `${dataSize}-1`) {
+					let id = document.getElementById(dataCompare);
+					let idBlock = document.getElementById(dataSize);
+					let idSvg = document.getElementById(`${dataSize}-svg`)
+					deletStatError()
+
+					console.log()
+					box.forEach(i => {
+						i.classList.remove('--active')
+					})
+					funcBox.forEach(x => {
+						x.classList.remove('--active')
+					})
+					if (idSvg) {
+						idSvg.classList.add('--active')
+					}
+
+					id.classList.add('--active');
+					idBlock.classList.add('--active');
+				} else {
+					buttonError(listError[dataCompare].title, listError[dataCompare].text)
+
+				}
+			})
+		})
+	}
+	finish()
 })
