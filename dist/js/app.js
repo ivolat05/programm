@@ -3,14 +3,77 @@
 $(function () {
 
 	let listError = {
-		"cofe-error": {
-			"title": "Это неправильный вариант. ",
-			"text": 'Ориентируйтесь на бюджет и цели бизнеса. На всякий можете заглянуть в справочник',
+		"error-coffe": {
+			"title": "Сейчас самое главное — подготовить всё необходимое.",
+			"text": 'А кофе можно выпить и потом.',
+		},
+		"main-error": {
+			"title": "Ой, вы выбрали этот вариант слишком рано. ",
+			"text": 'Чтобы написать программу, нужно сначала запустить среду разработки.',
+		},
+		"erorr-po": {
+			"title": "Ой, вы выбрали этот вариант слишком рано ",
+			"text": 'Чтобы что-то запустить, надо включить компьютер.',
+		},
+		"erorr-plat": {
+			"title": "Ой, вы выбрали этот вариант слишком рано.",
+			"text": 'Надо убедиться, что ПО обновлено.',
+		},
+		"erorr-plat-2": {
+			"title": "Ой, это неправильный вариант.",
+			"text": 'Плата уже подключена и работает в штатном режиме.',
+		},
+		"erorr-code": {
+			"title": "Ой, это неправильный вариант.",
+			"text": 'Надо закончить работу с платой.',
+		},
+		"erorr-cofe-2": {
+			"title": "Ой, это неправильный вариант!",
+			"text": 'Лучше сконцентрируйтесь на подключении платы.',
+		}
+		, "erorr-cofe-3": {
+			"title": "Кофе — всё ещё не главная задача.",
+			"text": 'Может, ваша страсть в чём-то другом? Попробуйте вместо IT открыть кофейню!',
+		},
+		"erorr-cofe-4": {
+			"title": "Кофе — всё ещё не главная задача.",
+			"text": 'Может, ваша страсть в чём-то другом? Попробуйте вместо IT открыть кофейню!',
+		},
+		"erorr-cofe-5": {
+			"title": "Пока нужно закончить работу с платой.",
+			"text": 'Но скоро вы доберётесь до заветной чашки.',
 		},
 
 	}
 
+	// start
+	function start() {
+		let btn = document.querySelectorAll('.main-btn');
+		let counter = 0;
+		btn.forEach(item => {
+			item.addEventListener('click', () => {
+				let dataSize = item.getAttribute('data-size');
+				let dataCompare = item.getAttribute('data-compare');
+				let mainBox = document.querySelectorAll('.main-box');
+				if (dataSize == counter) {
+					let id = document.getElementById(dataCompare);
 
+					counter += 1;
+					mainBox.forEach(event => {
+						event.classList.remove('--active')
+					})
+					id.classList.add('--active')
+					deletStatError()
+					item.style.display = "none";
+				} else {
+
+					buttonError(listError[dataCompare].title, listError[dataCompare].text)
+
+				}
+			})
+		})
+	}
+	start()
 	// вызов ошибки
 	function buttonError(title, text) {
 
@@ -60,5 +123,52 @@ $(function () {
 
 	}
 
+	// открытия модальных окан
+	function modalOpen() {
+		let btn = document.querySelectorAll('.open-modal');
+		let window = document.querySelectorAll('.modal-wind');
+		btn.forEach(item => {
+			item.addEventListener('click', () => {
+				let dataModal = item.getAttribute('data-modal');
+				let id = document.getElementById(dataModal);
+				deletStatError()
+				window.forEach(e => {
+					if (e.classList.contains('--active')) {
+						e.classList.remove('--active');
+					}
 
+				})
+				if (item.classList.contains('main-btn-finish')) {
+					item.style.display = 'none';
+				}
+
+				setTimeout(() => {
+					id.classList.add('--active')
+				}, 2000)
+			})
+		})
+	}
+	modalOpen();
+
+	// открытия этапа
+	function openEtap() {
+		let btn = document.querySelectorAll('.open-etap');
+		let window = document.querySelectorAll('.part');
+		let windows = document.querySelectorAll('.modal-wind');
+		btn.forEach(item => {
+			item.addEventListener('click', () => {
+				let dataModal = item.getAttribute('data-etap');
+				let id = document.getElementById(dataModal);
+				window.forEach(e => {
+					e.classList.remove('--active');
+				})
+				windows.forEach(x => {
+					x.classList.remove('--active');
+				})
+				id.classList.add('--active')
+
+			})
+		})
+	}
+	openEtap()
 })
